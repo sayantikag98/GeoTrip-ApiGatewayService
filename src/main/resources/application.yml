@@ -1,19 +1,19 @@
 spring:
   application:
-    name: APIGatewayService
+    name: API-GATEWAY
   cloud:
     gateway:
       routes:
         - id: auth-service
-          uri: lb://AUTHSERVICE
+          uri: lb://AUTH-SERVICE
           predicates:
             - Path=/api/v1/auth/**
         - id: booking-service
-          uri: lb://BOOKINGSERVICE
+          uri: lb://BOOKING-SERVICE
           predicates:
             - Path=/api/v1/booking/**
         - id: location-service
-          uri: lb://LOCATIONSERVICE
+          uri: lb://LOCATION-SERVICE
           predicates:
             - Path=/api/v1/location/**
 
