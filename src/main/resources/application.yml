@@ -16,6 +16,10 @@ spring:
           uri: lb://LOCATION-SERVICE
           predicates:
             - Path=/api/v1/location/**
+        - id: location-ws
+          uri: lb://LOCATION-SERVICE
+          predicates:
+            - Path=/ws/**
 
 #  main:
 #    web-application-type: reactive
